@@ -5,7 +5,7 @@ var margin = {top: 50, right: 340, bottom: 50, left: 100},
 
 
 // Add canvas to body
-var svg = d3.select("div").append("svg")
+var svg = d3.select(".econ-personal").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
