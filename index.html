@@ -1,7 +1,15 @@
 <!DOCTYPE html>
-<html>
-<meta charset="utf-8">
-<title>DataViz Midterm ScatterPlot</title>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Video Background</title>
+</head>
 
 <style>
 
@@ -18,8 +26,12 @@
   body {
     font-family: 'Roboto', sans-serif;
     font-weight: 100 ;
-    font-size: 14px;
+    font-size: 14px !important;
     line-height: 8px;
+  }
+
+  .graph text {
+    font-size: 14px;
   }
 
 .axis path,
@@ -39,7 +51,6 @@
 }
 
 .intro {
-  height: 100vh;
   margin-left: auto;
   margin-right: auto;
   width: 45%;
@@ -73,10 +84,17 @@
   width: 65%;
 }
 
-.figure1 {
+.figure {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 20px;
+}
+
+.income-graph {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 280px;
 }
 
 
@@ -89,71 +107,105 @@ header {
   font-weight: bold;
   font-size: 35px;
   line-height: 25px;
+}
 
+.infogram-embed {
+  margin-top: 20px;
 }
 
 </style>
 
-
 <body>
-  <header>
-      <h1>THE HUMAN FREEDOM INDEX</h1>
-  </header>
 
-  <section class = "intro">
-    <p>The HFI is the most comprehensive freedom index so far created for a globally meaningful
-      set of countries. The HFI covers 162 countries for 2016, the most recent year for which
-      sufficient data are available and it includes three countries Belarus, Iraq, and Sudan
-      that were added this year. The index ranks countries beginning in 2008, the earliest year for
-      which a robust enough index could be produced.</p>
+    <div class="section">
 
-    <p>On a scale of 0 to 10, where 10 represents more freedom, the average human freedom rating
-      for 162 countries in 2016 was 6.89. Among countries included in this year’s and last year’s
-      report, the level of freedom decreased slightly (−0.01) compared with 2015, with 63 countries
-      increasing their ratings and 87 decreasing. Since 2008, the level of global freedom has also
-      decreased slightly (−0.06), with 56 countries in the index increasing their ratings and 81 decreasing.</p>
+        <h1>THE HUMAN FREEDOM INDEX</h1>
 
-      <p>The jurisdictions that took the top 10 places, in order, were New Zealand, Switzerland,
-        Hong Kong, Australia, Canada, the Netherlands and Denmark (tied in 6th place), Ireland
-        and the United Kingdom (tied in 8th place), and Finland, Norway, and Taiwan (tied in 10th place).</p>
+        <div class="video-container">
+            <div class="color-overlay"></div>
+            <video autoplay loop muted>
+                <source src="video.mp4" type="video/mp4">
+            </video>
+        </div>
 
-  </section>
+    </div>
+
+    <section class = "intro">
+      <p>The Human Freedom Index (HFI) is the most comprehensive freedom index so far created for a globally meaningful
+        set of countries. The HFI covers 162 countries for 2016, the most recent year for which
+        sufficient data are available and it includes three countries Belarus, Iraq, and Sudan
+        that were added this year. The index ranks countries beginning in 2008, the earliest year for
+        which a robust enough index could be produced.</p>
+
+      <p>On a scale of 0 to 10, where 10 represents more freedom, the average human freedom rating
+        for 162 countries in 2016 was 6.89. Among countries included in this year’s and last year’s
+        report, the level of freedom decreased slightly (−0.01) compared with 2015, with 63 countries
+        increasing their ratings and 87 decreasing. Since 2008, the level of global freedom has also
+        decreased slightly (−0.06), with 56 countries in the index increasing their ratings and 81 decreasing.</p>
+
+        <p>The jurisdictions that took the top 10 places, in order, were New Zealand, Switzerland,
+          Hong Kong, Australia, Canada, the Netherlands and Denmark (tied in 6th place), Ireland
+          and the United Kingdom (tied in 8th place), and Finland, Norway, and Taiwan (tied in 10th place).</p>
+
+        <div class="infogram-embed" data-id="652ebaf1-45ce-4d39-922c-4e2ee7a7a8c1" data-type="interactive" data-title="Human Freedom Index"></div><script>!function(e,t,s,i){var n="InfogramEmbeds",o=e.getElementsByTagName("script")[0],d=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(i)&&(i=d+i),window[n]&&window[n].initialized)window[n].process&&window[n].process();else if(!e.getElementById(s)){var r=e.createElement("script");r.async=1,r.id=s,r.src=i,o.parentNode.insertBefore(r,o)}}(document,0,"infogram-async","https://e.infogram.com/js/dist/embed-loader-min.js");</script>
+
+    </section>
 
 
-  <section class = "first-graph">
-      <div class = "econ-personal">
-          <script src="https://d3js.org/d3.v3.min.js"></script>
-          <script src="Scatter.js"></script>
-     </div>
-     <div class = "econ-personal-desc">
-          <div>
-             <p>The correlation between the personal and economic freedom ratings was 0.63 for 2016.
-               Nations in the top quartile of personal freedom saw a higher economic freedom score compared
-               to the bottomquartile nations. </p>
-          </div>
+    <section class = "first-graph graph">
+        <div class = "econ-personal">
+            <script src="https://d3js.org/d3.v3.min.js"></script>
+            <script src="Scatter.js"></script>
+       </div>
+       <div class = "econ-personal-desc">
+            <div>
+               <p>The correlation between the personal and economic freedom ratings was 0.63 for 2016.
+                 Nations in the top quartile of personal freedom saw a higher economic freedom score compared
+                 to the bottomquartile nations. </p>
+            </div>
 
-          <div>
-             <p>Some countries ranked consistently high in the human freedom subindexes,
-               including Switzerland and New Zealand, which ranked in the top 10 in both personal
-               and economic freedom. By contrast, some countries that ranked high on personal freedom rank
-               significantly lower in economic freedom. For example, Sweden ranked 3rd in personal
-               freedom but 43rd in economic freedom; Slovenia ranked 23rd in personal freedom but 71st in
-               economic freedom; and Argentina ranked in 42nd place in personal freedom but 160th in economic freedom.</p>
-          </div>
+            <div>
+               <p>Some countries ranked consistently high in the human freedom subindexes,
+                 including Switzerland and New Zealand, which ranked in the top 10 in both personal
+                 and economic freedom. By contrast, some countries that ranked high on personal freedom rank
+                 significantly lower in economic freedom. For example, Sweden ranked 3rd in personal
+                 freedom but 43rd in economic freedom; Slovenia ranked 23rd in personal freedom but 71st in
+                 economic freedom; and Argentina ranked in 42nd place in personal freedom but 160th in economic freedom.</p>
+            </div>
 
-          <div>
-             <p>Similarly, some countries that ranked high on economic freedom found themselves significantly
-               lower in personal freedom. For example, Singapore ranked in 2nd place in economic freedom while
-               ranking 62nd in personal freedom; the United Arab Emirates ranked 37th in economic freedom but 149th
-               in personal freedom; and Qatar ranked 38th in economic freedom but 134th in personal freedom. </p>
-          </div>
+            <div>
+               <p>Similarly, some countries that ranked high on economic freedom found themselves significantly
+                 lower in personal freedom. For example, Singapore ranked in 2nd place in economic freedom while
+                 ranking 62nd in personal freedom; the United Arab Emirates ranked 37th in economic freedom but 149th
+                 in personal freedom; and Qatar ranked 38th in economic freedom but 134th in personal freedom. </p>
+            </div>
 
-     </div>
+       </div>
 
-   </section>
-   <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
-   <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
-   <script src = "App.js"></script>
+     </section>
+     <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+     <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
+     <script src = "App.js"></script>
+
+     <section class = "second-graph graph">
+            <div class = "intro"><p>Does human freedom matter for development? There is a strong relationship between
+              the level of freedom and income. Figure 2 shows that countries in the freest quartile enjoy
+              significantly greater average per capita income ($39,249) than those in the other quartiles.
+              On average, the freest countries in the world have a much higher per capita income than those that
+              are less free. Figure 10 shows this relationship by region. The data, of course, do not establish
+              a means of causation or even the direction of causation and provide only a snapshot in time.
+              But the data suggest the need to explore the links between freedom and development further and
+              to test the contribution of freedom to prosperity and other indicators of human well-being, as has
+              been done in the case of policies and institutions supportive of economic freedom.</p>
+            </div>
+
+            <div class = "income-graph">
+             <script src="https://d3js.org/d3.v4.min.js"></script>
+             <script src="income.js"></script>
+           </div>
+      </section>
+
 
 </body>
+
 </html>
