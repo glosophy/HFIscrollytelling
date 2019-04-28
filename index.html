@@ -8,119 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Video Background</title>
+    <title>DataViz Final</title>
 </head>
-
-<style>
-
-  p {
-    font-family: 'Georgia', serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-    line-height: 2;
-    color: #222222;
-    margin: 20px 0px 20px 0px;
-  }
-
-
-  body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100 ;
-    font-size: 14px !important;
-    line-height: 8px;
-  }
-
-  .graph text {
-    font-size: 14px;
-  }
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #404040;
-  shape-rendering: crispEdges;
-}
-
-.dot {
-  opacity: 0.7;
-}
-
-.first-graph {
-  height: 300vh;
-  display: flex;
-}
-
-.intro {
-  margin-left: auto;
-  margin-right: auto;
-  width: 45%;
-  margin-top: 50px;
-}
-
-.econ-personal {
-  width: 50%;
-  height: 100vh;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0!important;
-}
-
-
-.econ-personal-desc {
-  width: 50%;
-}
-
-
-.econ-personal-desc div{
-  height:100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-
-.econ-personal-desc div > p{
-  width: 65%;
-}
-
-.figure {
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.income-graph {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 280px;
-  margin-bottom: 60px;
-}
-
-
-header {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  font-size: 35px;
-  line-height: 25px;
-}
-
-.infogram-embed {
-  margin-top: 20px;
-}
-    
-.second-graph graph {
-    margin: 50px 0px 100px 0px;
-    }
-
-</style>
 
 <body>
 
@@ -138,7 +27,7 @@ header {
     </div>
 
     <section class = "intro">
-      <p>The Human Freedom Index (HFI) is the most comprehensive freedom index so far created for a globally meaningful
+      <p>The <em>Human Freedom Index</em> (HFI) is the most comprehensive freedom index so far created for a globally meaningful
         set of countries. The HFI covers 162 countries for 2016, the most recent year for which
         sufficient data are available and it includes three countries Belarus, Iraq, and Sudan
         that were added this year. The index ranks countries beginning in 2008, the earliest year for
@@ -199,7 +88,7 @@ header {
               the level of freedom and income. Figure 2 shows that countries in the freest quartile enjoy
               significantly greater average per capita income ($39,249) than those in the other quartiles.
               On average, the freest countries in the world have a much higher per capita income than those that
-              are less free. Figure 10 shows this relationship by region. The data, of course, do not establish
+              are less free. The data, of course, do not establish
               a means of causation or even the direction of causation and provide only a snapshot in time.
               But the data suggest the need to explore the links between freedom and development further and
               to test the contribution of freedom to prosperity and other indicators of human well-being, as has
@@ -211,6 +100,44 @@ header {
              <script src="income.js"></script>
            </div>
       </section>
+
+      <section class = "third-graph graph">
+             <div class = "intro"><p>Does human freedom matter for development? There is a strong relationship between
+               the level of freedom and income. Figure 2 shows that countries in the freest quartile enjoy
+               significantly greater average per capita income ($39,249) than those in the other quartiles.
+               On average, the freest countries in the world have a much higher per capita income than those that
+               are less free. </p>
+             </div>
+
+             <div class = "regions-graph">
+              <script src="https://d3js.org/d3.v4.min.js"></script>
+              <script src="regions.js"></script>
+            </div>
+            <div class = "intro"><p>Regional levels of freedom vary widely. The average ratings on the Human Freedom
+              Index by region were highest for North America (Canada and the United States), Western Europe,
+              and Oceania and were lowest for South Asia, sub-Saharan Africa, and the Middle East and North Africa.
+              The largest improvement in freedom since 2015 occurred in North America (0.03), while the largest deterioration
+              occurred in Eastern Europe (−0.08). In comparison, the largest improvement in freedom since 2008 occurred
+              in East Asia (0.11) and sub-Saharan Africa (0.11), while the largest deteriorations in freedom occurred
+              in the Caucasus and Central Asia (−0.25) and the Middle East and North Africa (−0.58), the least free region.
+              The regions that had greater overall levels of freedom also tended to exhibit higher ratings in personal freedom
+              relative to economic freedom than did the less free. That is consistent with the findings in Figure 1, that the countries
+              with high levels ofpersonal freedom also have high levels of economic freedom.</p>
+            </div>
+
+            <div class = "intro"><p>The data, of course, do not establish
+            a means of causation or even the direction of causation and provide only a snapshot in time.
+            But the data suggest the need to explore the links between freedom and development further and
+            to test the contribution of freedom to prosperity and other indicators of human well-being, as has
+            been done in the case of policies and institutions supportive of economic freedom.</p>
+          </div>
+
+          <div class = "outro"><p>The data and the text belong to the <em>Human Freedom Index 2018</em>, a report co-published by the Cato Institute,
+            the Fraser Institute, and the Liberales Institut at the Friedrich Naumann Foundation for Freedom. Find out more at
+            <a href="https://www.cato.org/hfi">cato.org/hfi</a>.</p>
+        </div>
+
+       </section>
 
 
 </body>
