@@ -58,6 +58,17 @@ svg.append("g")
              .style("text-anchor", "end")
              .text("Economic Freedom");
 
+
+ svg.selectAll(".text")
+   .data(data)
+   .enter()
+   .append("text")
+   .attr("class","label")
+   .attr("x", (function(d) { return x(d.quartile) + 75; }  ))
+   .attr("y", function(d) { return y(d.income) - 20; })
+   .attr("dy", ".75em")
+   .text(function(d) { return "$" + d.income; });
+
 // add a header
 svg.append("text")
    .attr("class", "figure")
